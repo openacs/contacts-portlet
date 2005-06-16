@@ -15,6 +15,18 @@ ad_page_contract {
     package_id
 } 
 
+set user_id [ad_conn user_id]
 set package_id [apm_package_id_from_key contacts]
 set community_id [dotlrn_community::get_community_id_from_url]
-ns_log notice "community_id = $community_id"
+
+if {$community_id == ""} {
+
+    db_foreach get_group_ids {} {
+
+	lappend community_id $group_id
+ 
+    }
+
+
+}
+
