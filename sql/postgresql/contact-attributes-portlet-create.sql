@@ -36,8 +36,8 @@ declare
   ds_id portal_datasources.datasource_id%TYPE;
 begin
   ds_id := portal_datasource__new(
-         ''contacts_portlet'',
-         ''Displays Contacts''
+         ''contact_attributes_portlet'',
+         ''Displays Contact Attributes''
   );
 
   
@@ -115,8 +115,8 @@ begin
 	-- create the implementation
 	foo := acs_sc_impl__new (
 		''portal_datasource'',
-		''contacts_portlet'',
-		''contacts_portlet''
+		''contact_attributes_portlet'',
+		''contact_attributes_portlet''
 	);
 
    return 0;
@@ -136,57 +136,57 @@ begin
 	-- add all the hooks
 	foo := acs_sc_impl_alias__new (
 	       ''portal_datasource'',
-	       ''contacts_portlet'',
+	       ''contact_attributes_portlet'',
 	       ''GetMyName'',
-	       ''contacts_portlet::get_my_name'',
+	       ''contact_attributes_portlet::get_my_name'',
 	       ''TCL''
 	);
 
 	foo := acs_sc_impl_alias__new (
 	       ''portal_datasource'',
-	       ''contacts_portlet'',
+	       ''contact_attributes_portlet'',
 	       ''GetPrettyName'',
-	       ''contacts_portlet::get_pretty_name'',
+	       ''contact_attributes_portlet::get_pretty_name'',
 	       ''TCL''
 	);
 
 	foo := acs_sc_impl_alias__new (
 	       ''portal_datasource'',
-	       ''contacts_portlet'',
+	       ''contact_attributes_portlet'',
 	       ''Link'',
-	       ''contacts_portlet::link'',
+	       ''contact_attributes_portlet::link'',
 	       ''TCL''
 	);
 
 	foo := acs_sc_impl_alias__new (
 	       ''portal_datasource'',
-	       ''contacts_portlet'',
+	       ''contact_attributes_portlet'',
 	       ''AddSelfToPage'',
-	       ''contacts_portlet::add_self_to_page'',
+	       ''contact_attributes_portlet::add_self_to_page'',
 	       ''TCL''
 	);
 
 	foo := acs_sc_impl_alias__new (
 	       ''portal_datasource'',
-	       ''contacts_portlet'',
+	       ''contact_attributes_portlet'',
 	       ''Show'',
-	       ''contacts_portlet::show'',
+	       ''contact_attributes_portlet::show'',
 	       ''TCL''
 	);
 
 	foo := acs_sc_impl_alias__new (
 	       ''portal_datasource'',
-	       ''contacts_portlet'',
+	       ''contact_attributes_portlet'',
 	       ''Edit'',
-	       ''contacts_portlet::edit'',
+	       ''contact_attributes_portlet::edit'',
 	       ''TCL''
 	);
 
 	foo := acs_sc_impl_alias__new (
 	       ''portal_datasource'',
-	       ''contacts_portlet'',
+	       ''contact_attributes_portlet'',
 	       ''RemoveSelfFromPage'',
-	       ''contacts_portlet::remove_self_from_page'',
+	       ''contact_attributes_portlet::remove_self_from_page'',
 	       ''TCL''
 	);
 
@@ -207,7 +207,7 @@ begin
 	-- Add the binding
 	perform acs_sc_binding__new (
 	    ''portal_datasource'',
-	    ''contacts_portlet''
+	    ''contact_attributes_portlet''
 	);
 
    return 0;
@@ -216,7 +216,6 @@ end;' language 'plpgsql';
 select inline_0();
 drop function inline_0();
 
-\i contact-attributes-portlet-create.sql
 
 
 

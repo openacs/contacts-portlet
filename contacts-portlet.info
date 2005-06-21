@@ -7,7 +7,7 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>f</singleton-p>
     
-    <version name="0.1d" url="http://openacs.org/repository/download/apm/contacts-portlet-0.1d.apm">
+    <version name="0.2d2" url="http://openacs.org/repository/download/apm/contacts-portlet-0.2d2.apm">
         <owner url="mailto:kiesbye@theservice.de">Bjoern Kiesbye</owner>
         <owner url="mailto:sussdorff@cognovis.de">Malte Sussdorff</owner>
         <summary>Portlet for the Contacts Package.</summary>
@@ -15,7 +15,7 @@
         <description format="text/plain">Portlet for the Contacts Package.</description>
         <maturity>0</maturity>
 
-        <provides url="contacts-portlet" version="0.1d"/>
+        <provides url="contacts-portlet" version="0.2d2"/>
         <requires url="contacts" version="1.0d"/>
 
         <callbacks>

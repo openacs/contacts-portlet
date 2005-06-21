@@ -1,5 +1,3 @@
-  
-
-
-
- <include src="/packages/contacts/lib/contacts"  package_id=@package_id@ query_id=@community_id@ group_id=@community_id@> 
+<if @community_id@ ne "">
+    <include src="/packages/contacts/lib/contact-relationships"  package_id=@package_id@ party_id="@organization_id@">
+</if>
