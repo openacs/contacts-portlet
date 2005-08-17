@@ -39,7 +39,7 @@ namespace eval contact_attributes_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-        return "[_ contacts-portlet.Contact_Attributes_Portlet]"
+        return "#contacts-portlet.Contact_Attributes_Portlet#"
     }
 
     ad_proc -public link {
